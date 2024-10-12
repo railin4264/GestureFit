@@ -1,0 +1,13 @@
+<ActionBar title="Ejercicio en Progreso"></ActionBar>
+
+<GridLayout rows="auto, *, auto" class="p-4">
+  <Label row="0" [text]="'Ejercicio: ' + currentExercise" class="text-xl font-bold mb-2"></Label>
+  
+  <StackLayout row="1" class="m-4">
+    <Label [text]="'Repeticiones: ' + repetitions" class="text-lg"></Label>
+    <Label [text]="'Tiempo: ' + elapsedTime + ' segundos'" class="text-lg"></Label>
+    <Label [text]="'Calorías quemadas: ' + caloriesBurned" class="text-lg"></Label>
+  </StackLayout>
+  
+  <Button row="2" text="Finalizar Ejercicio" (tap)="finishExercise()" class="btn btn-primary"></Button>
+</GridLayout>

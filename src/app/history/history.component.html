@@ -1,0 +1,13 @@
+<ActionBar title="Historial de Ejercicios"></ActionBar>
+
+<ListView [items]="exerciseHistory" class="list-group">
+  <ng-template let-item="item">
+    <StackLayout class="list-group-item">
+      <Label [text]="item.date" class="font-bold"></Label>
+      <Label [text]="'Ejercicio: ' + item.exercise"></Label>
+      <Label [text]="'Repeticiones: ' + item.repetitions"></Label>
+      <Label [text]="'Tiempo: ' + item.time + ' segundos'"></Label>
+      <Label [text]="'Calorías: ' + item.calories"></Label>
+    </StackLayout>
+  </ng-template>
+</ListView>
